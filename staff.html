@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Lifepoint Staff Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="cropped-life-point-logo-150x150.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style_1.css">
+  <script src="script.js" defer></script>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh; /* Full window height */
+  width: 100vw; /* Full window width */
+}
+
+.login-form {
+  background-color: #f4f4f4;
+  padding: 40px;
+  width: 40%; /* 40% of the window width */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-container {
+  display: flex;
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  margin-bottom: 10px; /* Reduced spacing */
+}
+
+.forgot-password {
+  color: #cc1816;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.remember-me {
+  display: flex;
+ 
+  
+}
+
+.remember-me input {
+  /* Adjust spacing between checkbox and label */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #cc1816;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #022257;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-form a {
+  color: #007BFF;
+}
+
+.background-section {
+  width: 60%; /* 60% of the window width */
+  background: linear-gradient(135deg, #cc1816, #8b0f3c, #cc1816);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-text {
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.info-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.info-text p {
+  font-size: 18px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    
+    <!-- Left Side: Login Form -->
+    <div class="login-form">
+        <img src="cropped-life-point-logo-150x150.png" alt="" srcset="" style="width: 100px; height: 100px;">
+      <h2>Login</h2>
+      <form action="index.html" >
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Email*">
+
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" required placeholder="Password*">
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <div class="form-options">
+          <a href="#" class="forgot-password" style="text-decoration: none; color: #cc1816;">Forgot Password?</a>
+          <div class="remember-me">
+            
+           
+          </div>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p>By logging in, you agree to our <a href="terms-condition.html">Terms & Conditions</a></p>
+    </div>
+
+    <!-- Right Side: Background with Text -->
+    <div class="background-section">
+      <div class="info-text">
+        <h2 style="color: black;">Welcome to the Lifepoint Medical Centre STAFF PORTAL</h2>
+        <p style="text-align: left ;">Access your personalized workspace with ease. Use your credentials to log in and stay updated with the latest internal announcements, schedules, and resources. Our secure platform ensures your data is protected, allowing you to focus on delivering exceptional patient care. For any login assistance or password reset, please contact the IT support team. By logging in, you agree to adhere to Lifepoint’s privacy policies and terms of use.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function togglePassword() {
+  const passwordInput = document.getElementById("password");
+  const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+  passwordInput.setAttribute("type", type);
+}
+
+  </script>
+  
+</body>
+</html>
